@@ -637,7 +637,6 @@ import {
   Square,
   MapPin,
   Calendar,
-  Home,
   Share2,
   Heart,
   Phone,
@@ -957,7 +956,7 @@ function Lightbox({ isOpen, onClose, image, title, onNext, onPrev, showNav }: an
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-100 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
         >
           <button className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors">
             <X className="w-6 h-6" />

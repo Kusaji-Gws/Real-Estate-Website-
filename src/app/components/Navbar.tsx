@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Home, Menu, X, Sun, Moon } from 'lucide-react';
+import {  Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTheme } from '../context/ThemeContext';
 import { NavLink } from 'react-router-dom';
