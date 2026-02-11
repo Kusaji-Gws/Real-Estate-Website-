@@ -9,6 +9,7 @@ import ContactPage from './components/ContactPage';
 import { Routes, Route } from 'react-router-dom';
 import Sell from './components/Sell';
 import { Hero } from './components/Hero';
+import Footer from './components/Footer';
 
 
 export default function App() {
@@ -20,9 +21,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           {/* <Route path="/sell" element={<Sell />} /> */}
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/properties" element={<Sell />} />
+          <Route path="/about" element={<><AboutUsPage /><Footer/></>} />
+          <Route path="/contact" element={<><ContactPage /><Footer/></>} />
+          <Route path="/properties" element={<><Sell /><Footer/></>} />
           <Route path="/property/:id" element={<PropertyDetail />} />
         </Routes>
 

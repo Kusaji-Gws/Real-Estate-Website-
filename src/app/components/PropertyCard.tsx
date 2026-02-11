@@ -95,7 +95,7 @@ export function PropertyCard({
 
         <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
           <div>
-            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">${price}</span>
+            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">₹{price}</span>
             {type === 'rent' && <span className="text-gray-600 dark:text-gray-400 text-sm">/month</span>}
           </div>
           <motion.button

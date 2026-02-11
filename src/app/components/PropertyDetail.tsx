@@ -16,6 +16,7 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
+  Calendar,
 } from 'lucide-react';
 import { properties } from '../data/properties';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -59,7 +60,7 @@ export function PropertyDetail() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         
         {/* Navigation Back Button */}
         <motion.button
@@ -70,7 +71,7 @@ export function PropertyDetail() {
           onClick={() => navigate(-1)} // 3. Uses router history to go back
           className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-6"
         >
-          <ArrowLeft className="w-5 h-5" />
+          <ArrowLeft className="w-5 h-5 " />
           Back to listings
         </motion.button>
 
@@ -154,7 +155,7 @@ export function PropertyDetail() {
                     <span className="text-lg">{property.location}</span>
                   </div>
                   <div className="text-4xl font-bold text-blue-600 dark:text-blue-400">
-                    ${property.price.toLocaleString()}
+                    ₹{property.price.toLocaleString()}
                     {property.type === 'rent' && (
                       <span className="text-lg text-gray-600 dark:text-gray-400">/mo</span>
                     )}
@@ -172,7 +173,7 @@ export function PropertyDetail() {
                 <StatItem icon={<Bed />} label="Bedrooms" value={property.bedrooms} />
                 <StatItem icon={<Bath />} label="Bathrooms" value={property.bathrooms} />
                 <StatItem icon={<Square />} label="Area" value={`${property.area.toLocaleString()} sqft`} />
-                <StatItem icon={<Square />} label="Year Built" value={property.yearBuilt} />
+                <StatItem icon={<Calendar />} label="Year Built" value={property.yearBuilt} />
               </div>
 
               <div className="mt-8">

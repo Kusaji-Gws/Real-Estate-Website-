@@ -17,6 +17,31 @@ const itemVariants: Variants = {
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pt-20">
+       {/* Call to Action (CTA) */}
+      {/* <section className="bg-linear-to-r from-blue-700 to-indigo-800 dark:from-blue-900 dark:to-indigo-950 py-20 px-4 sm:px-6 lg:px-8 text-white text-center">
+        <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Partner With Us?</h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Whether you're looking to buy, sell, or manage property, our team is here to guide you every step of the way.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-white text-blue-700 rounded-lg hover:bg-gray-100 transition-colors shadow-lg font-semibold"
+            >
+              Explore Our Services
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors font-semibold"
+            >
+              Contact Our Team
+            </motion.button>
+          </div>
+        </motion.div>
+      </section> */}
       {/* Header Section */}
       <section className="bg-blue-600 dark:bg-blue-800 py-16 px-4">
         <div className="max-w-7xl mx-auto text-center text-white">
@@ -93,7 +118,7 @@ const ContactPage = () => {
                   width="100%" height="100%" 
                   frameBorder="0" 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976373946229!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1675860000000!5m2!1sen!2sus"
-                  style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.8)' }}
+                  style={{ filter: ' contrast(1.2) opacity(0.8)' }}
                 ></iframe>
             </div>
           </motion.div>

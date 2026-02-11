@@ -1,51 +1,52 @@
 import { motion } from 'framer-motion';
 
 import type { Variants } from 'framer-motion';
+
 const AboutUsPage = () => {
 
-const containerVariants: Variants = {
-  hidden: { 
-    opacity: 0 
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
+  const containerVariants: Variants = {
+    hidden: {
+      opacity: 0
     },
-  },
-};
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
 
-const itemVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 50 
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 10,
-      stiffness: 100,
+  const itemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 50
     },
-  },
-};
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+      },
+    },
+  };
 
-const imageVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    scale: 0.8 
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "tween",
-      duration: 0.8,
-      ease: "easeOut",
+  const imageVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8
     },
-  },
-};
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "tween",
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -55,33 +56,11 @@ const imageVariants: Variants = {
       animate="visible"
     >
       {/* Hero Section: Engaging Introduction */}
-      <section className="relative h-96 flex items-center justify-center text-center overflow-hidden">
-        {/* Background Image with Overlay */}
-        <motion.div
-          className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        >
-          <img
-            src="https://via.placeholder.com/1920x600/2563eb/ffffff?text=Modern+Cityscape+Real+Estate"
-            alt="Modern Cityscape Background"
-            className="w-full h-full object-cover brightness-75"
-          />
-        </motion.div>
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+      {/* Background Image with Overlay */}
 
-        <motion.div
-          className="relative z-20 p-8 max-w-4xl"
-          variants={itemVariants}
-        >
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
-            Your Vision, Our Expertise
-          </h1>
-          <p className="text-xl text-blue-100 drop-shadow-md">
-            Connecting People with Their Perfect Spaces Since [Year Founded]
-          </p>
-        </motion.div>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-50 z-10" /> */}
+      <section className='mt-20'>
+        <AboutUs />
       </section>
 
       {/* Our Story / Mission Section */}
@@ -108,38 +87,9 @@ const imageVariants: Variants = {
       </section>
 
       {/* Our Values Section */}
-      <section className="bg-blue-600 dark:bg-blue-900 py-20 px-4 sm:px-6 lg:px-8 text-white">
-        <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants}>
-          <motion.h2 variants={itemVariants} className="text-4xl font-bold mb-12">
-            Values That Drive Us
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                icon: '🏠',
-                title: 'Integrity',
-                description: 'Upholding the highest standards of honesty and transparency in every interaction.'
-              },
-              {
-                icon: '💡',
-                title: 'Innovation',
-                description: 'Leveraging cutting-edge technology to provide superior service and insights.'
-              },
-              {
-                icon: '🤝',
-                title: 'Client-Centric',
-                description: 'Prioritizing your needs and aspirations to deliver tailored, exceptional results.'
-              }
-            ].map((value, index) => (
-              <motion.div key={index} variants={itemVariants} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <div className="text-5xl mb-4">{value.icon}</div>
-                <h3 className="text-2xl font-semibold mb-3 text-blue-700 dark:text-blue-400">{value.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+
+      <WhyBrikly />
+
 
       {/* Meet the Team Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -194,34 +144,178 @@ const imageVariants: Variants = {
           ))}
         </div>
       </section>
+          <Testimonials/>
 
-      {/* Call to Action (CTA) */}
-      <section className="bg-linear-to-r from-blue-700 to-indigo-800 dark:from-blue-900 dark:to-indigo-950 py-20 px-4 sm:px-6 lg:px-8 text-white text-center">
-        <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Partner With Us?</h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Whether you're looking to buy, sell, or manage property, our team is here to guide you every step of the way.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-blue-700 rounded-lg hover:bg-gray-100 transition-colors shadow-lg font-semibold"
-            >
-              Explore Our Services
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors font-semibold"
-            >
-              Contact Our Team
-            </motion.button>
-          </div>
-        </motion.div>
-      </section>
     </motion.div>
+
   );
 };
 
 export default AboutUsPage;
+
+
+
+import React from 'react';
+import { MapPin, HardHat, Home, Users } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+
+interface Feature {
+  Icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+interface FeatureCardProps extends Feature {
+  className?: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ Icon, title, description, className = "" }) => (
+  <div className={`bg-white p-8 rounded-4xl shadow-sm flex flex-col gap-5 border border-gray-50 ${className}`}>
+    {/* Icon Container */}
+    <div className="bg-[#052c24] w-14 h-14 rounded-full flex items-center justify-center">
+      <Icon className="text-[#d4f444] w-7 h-7" strokeWidth={2.5} />
+    </div>
+
+    <div className="space-y-3">
+      <h3 className="text-[#052c24] text-2xl font-bold tracking-tight">
+        {title}
+      </h3>
+      <p className="text-gray-500 leading-relaxed text-[1.05rem]">
+        {description}
+      </p>
+    </div>
+  </div>
+);
+
+const WhyBrikly: React.FC = () => {
+  const features: Feature[] = [
+    {
+      Icon: MapPin,
+      title: "Local Knowledge",
+      description: "Deep understanding of Austin's codes, climate, and construction standards."
+    },
+    {
+      Icon: HardHat,
+      title: "Pro Team",
+      description: "Skilled, certified builders and project managers committed to quality."
+    },
+    {
+      Icon: Home,
+      title: "Smart Designs",
+      description: "Modern layouts and features built for comfort, function, and flow."
+    },
+    {
+      Icon: Users,
+      title: "Client Focus",
+      description: "Responsive service and communication — your satisfaction is our priority."
+    }
+  ];
+
+  return (
+    <section className="bg-[#fafafa] py-24 px-6 md:px-12 lg:px-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        {/* Left Column: Heading Content */}
+        <div className="lg:sticky lg:top-24 space-y-8">
+          <div className="space-y-4">
+            <span className="text-[#052c24] font-bold uppercase tracking-[0.2em] text-xs">
+              WHY BRIKLY
+            </span>
+            <h2 className="text-[#052c24] text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+              What Sets Us <br /> Apart
+            </h2>
+          </div>
+
+          <p className="text-gray-600 text-xl leading-relaxed max-w-md font-medium opacity-90">
+            We're more than just builders — we're your trusted local partner.
+            From smart design to solid delivery, every detail is handled with
+            care, precision, and pride.
+          </p>
+        </div>
+
+        {/* Right Column: Staggered Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={index % 2 !== 0 ? "md:translate-y-12" : ""}
+            >
+              <FeatureCard {...feature} />
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+
+
+import { CheckCircle2 } from 'lucide-react';
+import Testimonials from './Testimonials';
+
+const AboutUs: React.FC = () => {
+  const stats: string[] = [
+    "150+ Projects",
+    "Licensed & ISO Certified",
+    "Experienced Team"
+  ];
+
+  return (
+    <section className="bg-white py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row gap-16 items-center">
+
+        {/* Left Side: Overlapping Images */}
+        <div className="relative w-full lg:w-1/2">
+          {/* Main Large Image */}
+          <div className="rounded-[2.5rem] overflow-hidden shadow-xl">
+            <img
+              src="https://cdn.britannica.com/73/114973-050-2DC46083/Midtown-Manhattan-Empire-State-Building-New-York.jpg"
+              alt="Modern apartment building"
+              className="w-full h-125 object-cover"
+            />
+          </div>
+
+          {/* Overlapping Smaller Image */}
+          <div className="absolute -bottom-10 -right-4 md:right-0 w-1/2 rounded-4xl overflow-hidden border-8 border-white shadow-2xl">
+            <img
+              src="https://thumbs.dreamstime.com/z/modern-building-design-27794985.jpg"
+              alt="Orange architectural building"
+              className="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Right Side: Content */}
+        <div className="w-full lg:w-1/2 space-y-8">
+          <div className="space-y-4">
+           
+            <h2 className="text-[#052c24] text-5xl md:text-6xl font-bold leading-tight">
+              Trusted Local Construction Partner in Austin.
+            </h2>
+          </div>
+
+          <p className="text-gray-600 text-lg leading-relaxed">
+            At Brikly, we're proud to serve Austin with reliable, high-quality construction
+            services. From custom homes to commercial builds, our local expertise ensures
+            every project is done right. We build with integrity, craftsmanship, and a
+            commitment to your vision.
+          </p>
+
+          <ul className="space-y-4">
+            {stats.map((item, index) => (
+              <li key={index} className="flex items-center gap-3 text-[#052c24] font-semibold text-lg">
+                <CheckCircle2 className="w-6 h-6 fill-[#052c24] text-white" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+

@@ -51,7 +51,7 @@ export function Hero() {
 
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-linear-to-br from-white/90 via-white/80 to-blue-50/90 dark:from-gray-950/95 dark:via-gray-950/90 dark:to-gray-900/95" /> */}
-      <div className="absolute inset-0 bg-linear-to-br from-white/15 via-white/30 to-blue-50/60 dark:from-gray-120/95 dark:via-gray-950/90 dark:to-gray-800/95" />
+      {/* <div className="absolute inset-0 bg-linear-to-br from-white/15 via-white/30 to-blue-50/60 dark:from-gray-120/95 dark:via-gray-950/90 dark:to-gray-800/95" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
@@ -62,7 +62,7 @@ export function Hero() {
         >
            <motion.h1
             variants={item}
-            className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 "
+            className="text-5xl md:text-6xl font-bold text-white dark:text-white mb-6 "
           >
             Find Your Dream
             <span className="block text-blue-600 dark:text-blue-400 mt-2">
@@ -73,7 +73,7 @@ export function Hero() {
 
           <motion.p
             variants={item}
-            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+            className="text-2xl text-white dark:text-white max-w-2xl mx-auto"
           >
             Discover the perfect property from our extensive collection of homes,
             apartments, and commercial spaces.
@@ -177,10 +177,10 @@ export function Hero() {
             { label: 'Years Experience', value: '15+' },
           ].map((stat) => (
             <motion.div key={stat.label} variants={item} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-white dark:text-white mb-2">
                 {stat.value}
               </div>
-              <div className="text-gray-600 dark:text-gray-400">
+              <div className="text-white text-xl dark:text-gray-400">
                 {stat.label}
               </div>
             </motion.div>
