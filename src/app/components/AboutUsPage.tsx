@@ -69,7 +69,7 @@ const AboutUsPage = () => {
           <motion.div variants={itemVariants}>
             <h2 className="text-4xl font-bold mb-6 text-blue-700 dark:text-blue-400">Our Story & Mission</h2>
             <p className="text-lg leading-relaxed mb-4">
-              Founded in [Year], [Your Company Name] began with a simple yet profound vision: to revolutionize the real estate experience. We saw a need for a partner who truly understood the aspirations of property owners and seekers, moving beyond mere transactions to build lasting relationships.
+              Founded in 2020, EstateHub began with a simple yet profound vision: to revolutionize the real estate experience. We saw a need for a partner who truly understood the aspirations of property owners and seekers, moving beyond mere transactions to build lasting relationships.
             </p>
             <p className="text-lg leading-relaxed">
               Our mission is to empower individuals and families to find not just a house, but a home, and to help investors build portfolios that thrive. We achieve this through unparalleled market insight, innovative technology, and a deep commitment to integrity and client success.
@@ -144,7 +144,7 @@ const AboutUsPage = () => {
           ))}
         </div>
       </section>
-          <Testimonials/>
+          <TestimonialSection/>
 
     </motion.div>
 
@@ -219,7 +219,7 @@ const WhyBrikly: React.FC = () => {
         <div className="lg:sticky lg:top-24 space-y-8">
           <div className="space-y-4">
             <span className="text-[#052c24] font-bold uppercase tracking-[0.2em] text-xs">
-              WHY BRIKLY
+              WHY EstateHub
             </span>
             <h2 className="text-[#052c24] text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
               What Sets Us <br /> Apart
@@ -253,7 +253,7 @@ const WhyBrikly: React.FC = () => {
 
 
 import { CheckCircle2 } from 'lucide-react';
-import Testimonials from './Testimonials';
+import TestimonialSection from './Testimonials';
 
 const AboutUs: React.FC = () => {
   const stats: string[] = [
@@ -292,12 +292,12 @@ const AboutUs: React.FC = () => {
           <div className="space-y-4">
            
             <h2 className="text-[#052c24] text-5xl md:text-6xl font-bold leading-tight">
-              Trusted Local Construction Partner in Austin.
+              Trusted Local Construction Partner in India.
             </h2>
           </div>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            At Brikly, we're proud to serve Austin with reliable, high-quality construction
+            At EstateHub, we're proud to serve Austin with reliable, high-quality construction
             services. From custom homes to commercial builds, our local expertise ensures
             every project is done right. We build with integrity, craftsmanship, and a
             commitment to your vision.

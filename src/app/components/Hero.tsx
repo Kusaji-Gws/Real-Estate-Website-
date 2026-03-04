@@ -38,20 +38,10 @@ export function Hero() {
   return (
     <>
     <section className="relative min-h-screen pt-16 overflow-hidden">
-      {/* Background image */}
-      {/* <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')",
-        }}
-      /> */}
+      
 
       <AnimatedBg />
 
-      {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-linear-to-br from-white/90 via-white/80 to-blue-50/90 dark:from-gray-950/95 dark:via-gray-950/90 dark:to-gray-900/95" /> */}
-      {/* <div className="absolute inset-0 bg-linear-to-br from-white/15 via-white/30 to-blue-50/60 dark:from-gray-120/95 dark:via-gray-950/90 dark:to-gray-800/95" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div

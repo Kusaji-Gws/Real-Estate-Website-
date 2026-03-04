@@ -14,9 +14,9 @@ const itemVariants: Variants = {
   visible: { y: 0, opacity: 1 }
 };
 
-const ContactPage = () => {
+const Contact2 = () => {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 ">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 mt-40">
        {/* Call to Action (CTA) */}
       {/* <section className="bg-linear-to-r from-blue-700 to-indigo-800 dark:from-blue-900 dark:to-indigo-950 py-20 px-4 sm:px-6 lg:px-8 text-white text-center">
         <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
@@ -174,4 +174,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Contact2;
